@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido</h1>
+    <p>Programa de inventariado de Ordenadores Obdulio.</p>
+</div>
+
+<div class="container text-center mt-3">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="@Url.Action("Index", "Componente")">
+                    <img src="./images/componentes.png" alt="Componentes" />
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="@Url.Action("Index", "Ordenador")">
+                    <img src="./images/pc.png" alt="Ordenadores">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="@Url.Action("Index", "Pedido")">
+                    <img src="./images/pedido.png" alt="Pedidos">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="@Url.Action("Index", "Factura")">
+                    <img src="./images/factura.png" alt="Facturas">
+                </a>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </a>
+    </div>
+</div>

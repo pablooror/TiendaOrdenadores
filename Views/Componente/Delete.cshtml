@@ -1,0 +1,69 @@
+﻿@model ComponentesMVC.Models.Componente
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Eliminar componente</h1>
+
+<h3>¿Está seguo de que desea eliminar el componente?</h3>
+<div>
+    <h4>Componente</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumSerie)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumSerie)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cores)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cores)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gigas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gigas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Calor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Calor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OrdenadorId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OrdenadorId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver a Inicio</a>
+    </form>
+</div>

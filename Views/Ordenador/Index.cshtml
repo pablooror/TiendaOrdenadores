@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ComponentesMVC.Models.Ordenador>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Inventario de Ordenadores</h1>
+
+<p>
+    @(await Component.InvokeAsync("BotonCreate"))
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.PedidoId)
+        </th>
+        
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.PedidoId)
+            </td>
+      
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                <a asp-action="ListaComp" asp-route-id="@item.Id">Componentes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Borrar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

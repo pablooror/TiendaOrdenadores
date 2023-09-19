@@ -1,0 +1,31 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+        font-family: Arial
+    }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+h1{
+    font-weight:bold;
+    font-family:Arial
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: aliceblue;
+    font-family: Arial
+}
+
+button{
+    font-size: 14px;
+    font-weight:bold
+}
